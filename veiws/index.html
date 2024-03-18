@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Voting Form</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+<div class="voting-form">
+    <h2>Vote for your favorite option:</h2>
+    <form action="/submit-vote" method="post" id="voteform">
+        <button type="submit" name="vote" value="a" onclick="submitVote" class="btn">Option 1</button>
+        <button type="submit" name="vote" value="b" onclick="submitVote"  class="btn">Option 2</button>
+        <button type="submit" name="vote" value="c" onclick="submitVote"  class="btn">Option 3</button>
+    </form>
+  
+    <div id="result"></div>
+</div>
+<script>
+    function submitVote(option) {
+    // Hide the voting form
+   document.querySelector("#voteform").classList.add("hide")
+}
+</script>
+
+</body>
+</html>
