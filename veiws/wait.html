@@ -9,8 +9,10 @@
 </head>
 <body>
     <h1>Wait For 10 sec before the next vote</h1>
-
+    
     <script>
+        var audio = new Audio('beep.mp3');
+        audio.play();
         setTimeout(function(){
             window.location = "/";
         },10000)
