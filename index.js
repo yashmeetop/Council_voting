@@ -47,6 +47,12 @@ app.get('/', (req, res) => {
 app.get('/result', (req, res) => {
     res.send(`The Result is , A got ${a} votes , B got ${b} votes and C got ${c} votes`)
 });
+app.get('/reset', (req, res) => {
+  a=0;
+  b=0;
+  c=0;
+  res.send("votes are reset");
+});
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
